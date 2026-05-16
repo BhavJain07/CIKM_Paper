@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "provbench-rag"
+version = "0.1.0"
+description = "ProvBench-RAG: provenance-sensitive retrieval under near-duplicate source confusion"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pydantic>=2.5",
+  "beautifulsoup4>=4.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+provbench = "provbench_rag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["provbench_rag*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

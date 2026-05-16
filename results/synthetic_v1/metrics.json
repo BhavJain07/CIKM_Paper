@@ -1,0 +1,71 @@
+{
+  "queries": 1500,
+  "k": 10,
+  "pool_k": 80,
+  "methods": {
+    "bm25": {
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.5526355568343256,
+      "psa_at_1_non_abstain": 0.0,
+      "provenance_f1_at_3_non_abstain": 0.375,
+      "sufficiency": 1.0,
+      "minimality": 0.10222222222222223,
+      "answer_accuracy": 0.41333333333333333,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.4686666666666667
+    },
+    "authority_first": {
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.9261859507142916,
+      "psa_at_1_non_abstain": 0.75,
+      "provenance_f1_at_3_non_abstain": 0.5,
+      "sufficiency": 1.0,
+      "minimality": 0.10222222222222223,
+      "answer_accuracy": 0.6,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.7028333333333334
+    },
+    "recent_first": {
+      "recall_at_k": 0.2,
+      "ndcg_at_k": 0.06309297535714575,
+      "psa_at_1_non_abstain": 0.0,
+      "provenance_f1_at_3_non_abstain": 0.0,
+      "sufficiency": 0.2,
+      "minimality": 0.02,
+      "answer_accuracy": 0.40380952380952384,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.29395238095238096
+    },
+    "pacer": {
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.9261859507142916,
+      "psa_at_1_non_abstain": 0.75,
+      "provenance_f1_at_3_non_abstain": 0.5,
+      "sufficiency": 1.0,
+      "minimality": 0.10222222222222223,
+      "answer_accuracy": 0.6,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.7028333333333334
+    },
+    "cluster_pacer": {
+      "recall_at_k": 0.9,
+      "ndcg_at_k": 0.9261859507142916,
+      "psa_at_1_non_abstain": 0.75,
+      "provenance_f1_at_3_non_abstain": 0.5,
+      "sufficiency": 0.9,
+      "minimality": 0.08,
+      "answer_accuracy": 0.6,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.6795000000000001
+    }
+  },
+  "mcnemar_psa_preferred_bm25_vs_pacer": 2.3661043723335494e-271,
+  "mcnemar_n_queries": 1200,
+  "pacer_weights": {
+    "alpha": 1.0,
+    "beta": 1.0,
+    "gamma": 1.0,
+    "delta": 1.0,
+    "eta": 1.0
+  }
+}

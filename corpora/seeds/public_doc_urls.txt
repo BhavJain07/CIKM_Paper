@@ -1,0 +1,8 @@
+# Public documentation / policy-style primary sources (no login). One URL per line.
+https://docs.python.org/3/license.html
+https://www.python.org/downloads/release/python-3120/
+https://peps.python.org/pep-0484/
+https://peps.python.org/pep-0585/
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+https://datatracker.ietf.org/doc/html/rfc9110
+https://www.w3.org/TR/json-ld11/

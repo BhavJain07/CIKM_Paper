@@ -1,0 +1,71 @@
+{
+  "queries": 1640,
+  "k": 10,
+  "pool_k": 80,
+  "methods": {
+    "bm25": {
+      "recall_at_k": 0.4347560975609756,
+      "ndcg_at_k": 0.22556807214223457,
+      "psa_at_1_non_abstain": 0.011940298507462687,
+      "provenance_f1_at_3_non_abstain": 0.14664179104477612,
+      "sufficiency": 0.4347560975609756,
+      "minimality": 0.04347560975609756,
+      "answer_accuracy": 0.21282401297558495,
+      "abstention_accuracy": 0.8170731707317073,
+      "prov_score": 0.2722246144561277
+    },
+    "authority_first": {
+      "recall_at_k": 0.4347560975609756,
+      "ndcg_at_k": 0.33772914398957454,
+      "psa_at_1_non_abstain": 0.23582089552238805,
+      "provenance_f1_at_3_non_abstain": 0.2585820895522388,
+      "sufficiency": 0.4347560975609756,
+      "minimality": 0.04347560975609756,
+      "answer_accuracy": 0.2514418991544467,
+      "abstention_accuracy": 0.8170731707317073,
+      "prov_score": 0.3378492352545745
+    },
+    "recent_first": {
+      "recall_at_k": 0.05609756097560976,
+      "ndcg_at_k": 0.029143974604171098,
+      "psa_at_1_non_abstain": 0.011194029850746268,
+      "provenance_f1_at_3_non_abstain": 0.016417910447761194,
+      "sufficiency": 0.05609756097560976,
+      "minimality": 0.005609756097560976,
+      "answer_accuracy": 0.25232285834847334,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.22794019765956097
+    },
+    "pacer": {
+      "recall_at_k": 0.7823170731707317,
+      "ndcg_at_k": 0.5645736351067759,
+      "psa_at_1_non_abstain": 0.2783582089552239,
+      "provenance_f1_at_3_non_abstain": 0.3597014925373134,
+      "sufficiency": 0.7823170731707317,
+      "minimality": 0.08026422764227642,
+      "answer_accuracy": 0.43496109760915996,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.49683287542158383
+    },
+    "cluster_pacer": {
+      "recall_at_k": 0.677439024390244,
+      "ndcg_at_k": 0.5458648184057133,
+      "psa_at_1_non_abstain": 0.2783582089552239,
+      "provenance_f1_at_3_non_abstain": 0.35261194029850745,
+      "sufficiency": 0.677439024390244,
+      "minimality": 0.05859756097560976,
+      "answer_accuracy": 0.43496109760915996,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.4726072656654863
+    }
+  },
+  "mcnemar_psa_preferred_bm25_vs_pacer": 6.812735744013041e-108,
+  "mcnemar_n_queries": 1340,
+  "pacer_weights": {
+    "alpha": 1.0,
+    "beta": 1.0,
+    "gamma": 1.0,
+    "delta": 1.0,
+    "eta": 1.0
+  }
+}

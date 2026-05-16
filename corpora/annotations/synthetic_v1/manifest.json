@@ -1,0 +1,7 @@
+{
+  "clusters": 1500,
+  "documents": 4200,
+  "queries": 1500,
+  "seed": 42,
+  "instances_per_family": 300
+}

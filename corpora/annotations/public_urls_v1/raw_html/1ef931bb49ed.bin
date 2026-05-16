@@ -1,0 +1,1073 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <script defer
+            file-types="bz2,chm,dmg,exe,gz,json,msi,msix,pdf,pkg,tgz,xz,zip"
+            data-domain="python.org"
+            src="https://analytics.python.org/js/script.file-downloads.outbound-links.js"></script>
+
+    <meta charset="utf-8">
+
+    <link rel="prefetch" href="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    <link rel="prefetch" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+
+    <meta name="application-name" content="Python.org">
+    <meta name="apple-mobile-web-app-title" content="Python.org">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+
+    <script async
+            src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+            integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+            crossorigin="anonymous"
+    ></script>
+    <script src="/static/js/libs/modernizr.js"></script>
+
+    <link href="/static/stylesheets/style.c4f369bed0d3.css" rel="stylesheet" type="text/css" media="all" title="default" />
+    <link href="/static/stylesheets/mq.a4feecea96fa.css" rel="stylesheet" type="text/css" media="not print, braille, embossed, speech, tty" />
+    <link href="/static/stylesheets/font-awesome.bf0c425cdb73.css" rel="stylesheet" type="text/css" media="screen" />
+    
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon-precomposed.png">
+
+    
+    <meta name="msapplication-TileImage" content="/static/metro-icon-144x144.png"><!-- white shape -->
+    <meta name="msapplication-TileColor" content="#3673a5"><!-- python blue -->
+    <meta name="msapplication-navbutton-color" content="#3673a5">
+
+    <title>Python Release Python 3.12.0 | Python.org</title>
+
+    <meta name="description" content="The official home of the Python Programming Language">
+    <meta name="keywords" content="Python programming language object oriented web free open source software license documentation download community">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Python.org">
+    <meta property="og:title" content="Python Release Python 3.12.0">
+    <meta property="og:description" content="The official home of the Python Programming Language">
+    
+    <meta property="og:image" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    <meta property="og:image:secure_url" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    
+    <meta property="og:url" content="https://www.python.org/downloads/release/python-3120/">
+
+    <link rel="author" href="/humans.txt">
+
+    <link rel="alternate" type="application/rss+xml" title="Python Enhancement Proposals"
+          href="https://peps.python.org/peps.rss">
+    <link rel="alternate" type="application/rss+xml" title="Python Job Opportunities"
+          href="https://www.python.org/jobs/feed/rss/">
+    <link rel="alternate" type="application/rss+xml" title="Python Software Foundation News"
+          href="https://pyfound.blogspot.com/feeds/posts/default?alt=rss">
+    <link rel="alternate" type="application/rss+xml" title="Python Insider"
+          href="https://blog.python.org/feeds/posts/default?alt=rss">
+   <link rel="alternate" type="application/rss+xml" title="Python Releases"
+         href="https://www.python.org/downloads/feed.rss">
+
+    
+
+    
+    <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "WebSite",
+       "url": "https://www.python.org/",
+       "potentialAction": {
+         "@type": "SearchAction",
+         "target": "https://www.python.org/search/?q={search_term_string}",
+         "query-input": "required name=search_term_string"
+       }
+     }
+    </script>
+
+    
+</head>
+
+<body class="python downloads">
+
+    <div id="touchnav-wrapper">
+
+        <div id="nojs" class="do-not-print">
+            <p><strong>Notice:</strong> This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets.</p>
+        </div>
+
+        <!-- Sister Site Links -->
+        <div id="top" class="top-bar do-not-print">
+
+            <nav class="meta-navigation container">
+
+                
+                <div class="skip-link screen-reader-text">
+                    <a href="#content" title="Skip to content">Skip to content</a>
+                </div>
+
+                
+                <a id="close-python-network" class="jump-link" href="#python-network" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-down"><span>&#9660;</span></span> Close
+                </a>
+
+                
+
+<ul class="menu" role="tree">
+    
+    <li class="python-meta ">
+        <a href="/" title="The Python Programming Language" >Python</a>
+    </li>
+    
+    <li class="psf-meta ">
+        <a href="https://www.python.org/psf/" title="The Python Software Foundation" >PSF</a>
+    </li>
+    
+    <li class="docs-meta ">
+        <a href="https://docs.python.org" title="Python Documentation" >Docs</a>
+    </li>
+    
+    <li class="pypi-meta ">
+        <a href="https://pypi.org/" title="Python Package Index" >PyPI</a>
+    </li>
+    
+    <li class="jobs-meta ">
+        <a href="/jobs/" title="Python Job Board" >Jobs</a>
+    </li>
+    
+    <li class="shop-meta ">
+        <a href="/community/"  >Community</a>
+    </li>
+    
+</ul>
+
+
+                <a id="python-network" class="jump-link" href="#top" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> The Python Network
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Header elements -->
+        <header class="main-header">
+            <div class="container">
+
+                <div class="site-headline">
+                    <a href="/"><img class="python-logo" src="/static/img/python-logo.png" alt="python&trade;"></a>
+                </div>
+
+                <div class="options-bar-container do-not-print">
+                    <a href="https://donate.python.org/" class="donate-button">Donate</a>
+                    <div class="options-bar">
+                        
+                        <a id="site-map-link" class="jump-to-menu" href="#site-map"><span class="menu-icon">&equiv;</span> Menu</a><form class="search-the-site" action="/search/" method="get">
+                            <fieldset title="Search Python.org">
+
+                                <span aria-hidden="true" class="icon-search"></span>
+
+                                <label class="screen-reader-text" for="id-search-field">Search This Site</label>
+                                <input id="id-search-field" name="q" type="search" class="search-field" placeholder="Search" value="" tabindex="1">
+
+                                <button type="submit" name="submit" id="submit" class="search-button" title="Submit this Search" tabindex="3">
+                                    GO
+                                </button>
+
+                            </fieldset>
+                        </form><span class="breaker"></span><div class="adjust-font-size" aria-hidden="true">
+                            <ul class="navigation menu" aria-label="Adjust Text Size on Page">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger"><strong><small>A</small> A</strong></a>
+                                    <ul class="subnav menu" role="menu">
+                                        <li class="tier-2 element-1" role="menuitem"><a class="text-shrink" title="Make Text Smaller" href="javascript:;">Smaller</a></li>
+                                        <li class="tier-2 element-2" role="menuitem"><a class="text-grow" title="Make Text Larger" href="javascript:;">Larger</a></li>
+                                        <li class="tier-2 element-3" role="menuitem"><a class="text-reset" title="Reset any font size changes I have made" href="javascript:;">Reset</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><div class="winkwink-nudgenudge">
+                            <ul class="navigation menu" aria-label="Social Media Navigation">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger">Socialize</a>
+                                    <ul class="subnav menu" role="menu">
+                                        <li class="tier-2 element-1" role="menuitem"><a href="https://www.linkedin.com/company/python-software-foundation/"><i aria-hidden="true" class="fa fa-linkedin-square"></i>LinkedIn</a></li>
+                                        <li class="tier-2 element-2" role="menuitem"><a href="https://fosstodon.org/@ThePSF"><span aria-hidden="true" class="icon-mastodon"></span>Mastodon</a></li>
+                                        <li class="tier-2 element-3" role="menuitem"><a href="/community/irc/"><span aria-hidden="true" class="icon-freenode"></span>Chat on IRC</a></li>
+                                        <li class="tier-2 element-4" role="menuitem"><a href="https://twitter.com/ThePSF"><span aria-hidden="true" class="icon-twitter"></span>Twitter</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <span data-html-include="/authenticated"></span>
+                    </div><!-- end options-bar -->
+                </div>
+
+                <nav id="mainnav" class="python-navigation main-navigation do-not-print">
+                    
+                        
+<ul class="navigation menu" role="menubar" aria-label="Main Navigation">
+  
+    
+    
+    <li id="about" class="tier-1 element-1  " aria-haspopup="true">
+        <a href="/about/" title="" class="">About</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="menuitem"><a href="/about/apps/" title="">Applications</a></li>
+    
+        <li class="tier-2 element-2" role="menuitem"><a href="/about/quotes/" title="">Quotes</a></li>
+    
+        <li class="tier-2 element-3" role="menuitem"><a href="/about/gettingstarted/" title="">Getting Started</a></li>
+    
+        <li class="tier-2 element-4" role="menuitem"><a href="/about/help/" title="">Help</a></li>
+    
+        <li class="tier-2 element-5" role="menuitem"><a href="http://brochure.getpython.info/" title="">Python Brochure</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="downloads" class="tier-1 element-2  " aria-haspopup="true">
+        <a href="/downloads/" title="" class="">Downloads</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="menuitem"><a href="/downloads/" title="">All releases</a></li>
+    
+        <li class="tier-2 element-2" role="menuitem"><a href="/downloads/source/" title="">Source code</a></li>
+    
+        <li class="tier-2 element-3" role="menuitem"><a href="/downloads/windows/" title="">Windows</a></li>
+    
+        <li class="tier-2 element-4" role="menuitem"><a href="/downloads/macos/" title="">macOS</a></li>
+    
+        <li class="tier-2 element-5" role="menuitem"><a href="/downloads/android/" title="">Android</a></li>
+    
+        <li class="tier-2 element-6" role="menuitem"><a href="/download/other/" title="">Other Platforms</a></li>
+    
+        <li class="tier-2 element-7" role="menuitem"><a href="https://docs.python.org/3/license.html" title="">License</a></li>
+    
+        <li class="tier-2 element-8" role="menuitem"><a href="/download/alternatives" title="">Alternative Implementations</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="documentation" class="tier-1 element-3  " aria-haspopup="true">
+        <a href="/doc/" title="" class="">Documentation</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="menuitem"><a href="/doc/" title="">Docs</a></li>
+    
+        <li class="tier-2 element-2" role="menuitem"><a href="/doc/av" title="">Audio/Visual Talks</a></li>
+    
+        <li class="tier-2 element-3" role="menuitem"><a href="https://wiki.python.org/moin/BeginnersGuide" title="">Beginner&#x27;s Guide</a></li>
+    
+        <li class="tier-2 element-4" role="menuitem"><a href="https://docs.python.org/3/faq/" title="">FAQ</a></li>
+    
+        <li class="tier-2 element-5" role="menuitem"><a href="https://translations.python.org/" title="">Non-English Docs</a></li>
+    
+        <li class="tier-2 element-6" role="menuitem"><a href="https://peps.python.org" title="">PEP Index</a></li>
+    
+        <li class="tier-2 element-7" role="menuitem"><a href="https://wiki.python.org/moin/PythonBooks" title="">Python Books</a></li>
+    
+        <li class="tier-2 element-8" role="menuitem"><a href="/doc/essays/" title="">Python Essays</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="community" class="tier-1 element-4  " aria-haspopup="true">
+        <a href="/community/" title="" class="">Community</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="menuitem"><a href="/community/diversity/" title="">Diversity</a></li>
+    
+        <li class="tier-2 element-2" role="menuitem"><a href="/community/lists/" title="">Mailing Lists</a></li>
+    
+        <li class="tier-2 element-3" role="menuitem"><a href="/community/irc/" title="">IRC</a></li>
+    
+        <li class="tier-2 element-4" role="menuitem"><a href="/community/forums/" title="">Forums</a></li>
+    
+        <li class="tier-2 element-5" role="menuitem"><a href="/psf/annual-report/2024/" title="">PSF Annual Impact Report</a></li>
+    
+        <li class="tier-2 element-6" role="menuitem"><a href="/community/workshops/" title="">Python Conferences</a></li>
+    
+        <li class="tier-2 element-7" role="menuitem"><a href="/community/sigs/" title="">Special Interest Groups</a></li>
+    
+        <li class="tier-2 element-8" role="menuitem"><a href="/community/logos/" title="">Python Logo</a></li>
+    
+        <li class="tier-2 element-9" role="menuitem"><a href="https://wiki.python.org/moin/" title="">Python Wiki</a></li>
+    
+        <li class="tier-2 element-10" role="menuitem"><a href="/psf/conduct/" title="">Code of Conduct</a></li>
+    
+        <li class="tier-2 element-11" role="menuitem"><a href="/community/awards" title="">Community Awards</a></li>
+    
+        <li class="tier-2 element-12" role="menuitem"><a href="/psf/get-involved/" title="">Get Involved</a></li>
+    
+        <li class="tier-2 element-13" role="menuitem"><a href="/psf/community-stories/" title="">Shared Stories</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="success-stories" class="tier-1 element-5  " aria-haspopup="true">
+        <a href="/success-stories/" title="success-stories" class="">Success Stories</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="menuitem"><a href="/success-stories/category/arts/" title="">Arts</a></li>
+    
+        <li class="tier-2 element-2" role="menuitem"><a href="/success-stories/category/business/" title="">Business</a></li>
+    
+        <li class="tier-2 element-3" role="menuitem"><a href="/success-stories/category/education/" title="">Education</a></li>
+    
+        <li class="tier-2 element-4" role="menuitem"><a href="/success-stories/category/engineering/" title="">Engineering</a></li>
+    
+        <li class="tier-2 element-5" role="menuitem"><a href="/success-stories/category/government/" title="">Government</a></li>
+    
+        <li class="tier-2 element-6" role="menuitem"><a href="/success-stories/category/scientific/" title="">Scientific</a></li>
+    
+        <li class="tier-2 element-7" role="menuitem"><a href="/success-stories/category/software-development/" title="">Software Development</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="news" class="tier-1 element-6  " aria-haspopup="true">
+        <a href="/blogs/" title="News from around the Python world" class="">News</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="menuitem"><a href="/blogs/" title="Python Insider Blog Posts">Python News</a></li>
+    
+        <li class="tier-2 element-2" role="menuitem"><a href="/psf/newsletter/" title="Python Software Foundation Newsletter">PSF Newsletter</a></li>
+    
+        <li class="tier-2 element-3" role="menuitem"><a href="http://pyfound.blogspot.com/" title="PSF Blog">PSF News</a></li>
+    
+        <li class="tier-2 element-4" role="menuitem"><a href="http://pycon.blogspot.com/" title="PyCon Blog">PyCon US News</a></li>
+    
+        <li class="tier-2 element-5" role="menuitem"><a href="http://planetpython.org/" title="Planet Python">News from the Community</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="events" class="tier-1 element-7  " aria-haspopup="true">
+        <a href="/events/" title="" class="">Events</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="menuitem"><a href="/events/python-events/" title="">Python Events</a></li>
+    
+        <li class="tier-2 element-2" role="menuitem"><a href="/events/python-user-group/" title="">User Group Events</a></li>
+    
+        <li class="tier-2 element-3" role="menuitem"><a href="/events/python-events/past/" title="">Python Events Archive</a></li>
+    
+        <li class="tier-2 element-4" role="menuitem"><a href="/events/python-user-group/past/" title="">User Group Events Archive</a></li>
+    
+        <li class="tier-2 element-5" role="menuitem"><a href="https://wiki.python.org/moin/PythonEventsCalendar#Submitting_an_Event" title="">Submit an Event</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+  
+</ul>
+
+                    
+                </nav>
+
+                <div class="header-banner "> <!-- for optional "do-not-print" class -->
+                    
+                    
+                </div>
+
+                
+                
+
+             </div><!-- end .container -->
+        </header>
+
+        <div id="content" class="content-wrapper">
+            <!-- Main Content Column -->
+            <div class="container">
+
+                <section class="main-content " role="main">
+
+                    
+
+
+<ul class="breadcrumbs menu">
+	
+</ul>
+
+
+
+                    
+
+                    
+    <article class="text">
+        <span data-html-include="/release-edit-button/832"></span>
+
+        <header class="article-header">
+            <h1 class="page-title">Python 3.12.0</h1>
+        </header>
+
+        
+        
+
+        
+        <div class="user-feedback level-notice">
+            <span>Note:</span> Python 3.12.0 has been superseded by <a href="/downloads/release/python-31213/">Python 3.12.13</a>.
+        </div>
+        
+
+        <p><strong>Release date:</strong> Oct. 2, 2023</p>
+
+        
+        <h2>This is the stable release of Python 3.12.0</h2>
+<p>Python 3.12.0 is the newest major release of the Python programming language, and it contains many new features and optimizations.</p>
+<h1>Major new features of the 3.12 series, compared to 3.11</h1>
+<h2>New features</h2>
+<ul>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-701-syntactic-formalization-of-f-strings">More flexible f-string parsing</a>, allowing many things previously disallowed (<a href="https://peps.python.org/pep-0701/">PEP 701</a>).</li>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-688-making-the-buffer-protocol-accessible-in-python">Support for the buffer protocol</a> in Python code (<a href="https://peps.python.org/pep-0688/">PEP 688</a>).</li>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-669-low-impact-monitoring-for-cpython">A new debugging/profiling API</a> (<a href="https://peps.python.org/pep-0669/">PEP 669</a>).</li>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-684-a-per-interpreter-gil">Support for isolated subinterpreters</a> with separate Global Interpreter Locks (<a href="https://peps.python.org/pep-0684">PEP 684</a>).</li>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#improved-error-messages">Even more improved error messages</a>. More exceptions potentially caused by typos now make suggestions to the user.</li>
+<li><a href="https://docs.python.org/3.12/howto/perf_profiling.html">Support for the Linux <code>perf</code> profiler</a> to report Python function names in traces.</li>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#optimizations">Many large and small performance improvements</a> (like <a href="https://peps.python.org/pep-0709/">PEP 709</a> and support for the BOLT binary optimizer), delivering an estimated 5% overall performance improvement.</li>
+</ul>
+<h2>Type annotations</h2>
+<ul>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-695-type-parameter-syntax">New type annotation syntax</a> for generic classes (<a href="https://peps.python.org/pep-0695/">PEP 695</a>).</li>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-698-override-decorator-for-static-typing">New override decorator</a> for methods (<a href="https://peps.python.org/pep-0698">PEP 698</a>).</li>
+</ul>
+<h2>Deprecations</h2>
+<ul>
+<li>The deprecated <code>wstr</code> and <code>wstr_length</code> members of the C implementation of unicode objects were removed, per <a href="https://peps.python.org/pep-0623/">PEP 623</a>.</li>
+<li>In the <code>unittest</code> module, a number of long deprecated methods and classes were removed. (They had been deprecated since Python 3.1 or 3.2).</li>
+<li>The deprecated <code>smtpd</code> and <code>distutils</code> modules have been removed (see <a href="https://peps.python.org/pep-0594/">PEP 594</a> and <a href="https://peps.python.org/pep-0632/">PEP 632</a>. The <code>setuptools</code> package continues to provide the <code>distutils</code> module.</li>
+<li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#removed">A number of other old, broken and deprecated functions, classes and methods</a> have been removed.</li>
+<li>Invalid backslash escape sequences in strings now warn with <code>SyntaxWarning</code> instead of <code>DeprecationWarning</code>, making them more visible. (They will become syntax errors in the future.)</li>
+<li>The internal representation of integers has changed in preparation for performance enhancements. (This should not affect most users as it is an internal detail, but it may cause problems for Cython-generated code.)</li>
+</ul>
+<p>For more details on the changes to Python 3.12, see <a href="https://docs.python.org/3.12/whatsnew/3.12.html">What's new in Python 3.12</a>.</p>
+<h1>More resources</h1>
+<ul>
+<li><a href="https://docs.python.org/3.12/">Online Documentation</a>.</li>
+<li><a href="https://www.python.org/dev/peps/pep-0693/">PEP 693</a>, the Python 3.12 Release Schedule.</li>
+<li>Report bugs via <a href="https://github.com/python/cpython/issues">GitHub Issues</a>.</li>
+<li><a href="https://www.python.org/psf/donations/">Help fund Python and its community</a>.</li>
+</ul>
+<h1>And now for something completely different</h1>
+<div class="highlight"><pre><span></span><code><span class="n">They</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="n">help</span>
+<span class="n">So</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">tell</span><span class="w"> </span><span class="n">me</span>
+<span class="n">These</span><span class="w"> </span><span class="n">haggard</span><span class="w"> </span><span class="n">faces</span><span class="w"> </span><span class="n">could</span><span class="w"> </span><span class="n">belong</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">me</span>
+<span class="n">Should</span><span class="w"> </span><span class="n">life</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">dealt</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">different</span><span class="w"> </span><span class="n">hand</span>
+<span class="n">We</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">who</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">really</span><span class="w"> </span><span class="k">are</span>
+<span class="n">Chancers</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">scroungers</span>
+<span class="n">Layabouts</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">loungers</span>
+<span class="k">With</span><span class="w"> </span><span class="n">bombs</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">sleeves</span>
+<span class="n">Cut</span><span class="o">-</span><span class="n">throats</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">thieves</span>
+<span class="n">They</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="ow">not</span>
+<span class="n">Welcome</span><span class="w"> </span><span class="n">here</span>
+<span class="n">We</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">them</span>
+<span class="k">Go</span><span class="w"> </span><span class="n">back</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">came</span><span class="w"> </span><span class="k">from</span>
+<span class="n">They</span><span class="w"> </span><span class="n">cannot</span>
+<span class="n">Share</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="n">food</span>
+<span class="n">Share</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="n">homes</span>
+<span class="n">Share</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="n">countries</span>
+<span class="n">Instead</span><span class="w"> </span><span class="n">let</span><span class="w"> </span><span class="n">us</span>
+<span class="n">Build</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">wall</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">keep</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="k">out</span>
+<span class="n">It</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">okay</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">say</span>
+<span class="n">These</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="ow">like</span><span class="w"> </span><span class="n">us</span>
+<span class="n">A</span><span class="w"> </span><span class="n">place</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="n">belong</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">those</span><span class="w"> </span><span class="n">who</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">born</span><span class="w"> </span><span class="n">there</span>
+<span class="n">Do</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">stupid</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">think</span><span class="w"> </span><span class="n">that</span>
+<span class="n">The</span><span class="w"> </span><span class="n">world</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">looked</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">another</span><span class="w"> </span><span class="n">way</span>
+
+<span class="p">(</span><span class="n">now</span><span class="w"> </span><span class="k">read</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">bottom</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">top</span><span class="p">)</span>
+</code></pre></div>
+
+<p><a href="https://brianbilston.com/2016/03/23/refugees/">Refugees</a>, by <a href="https://mastodon.online/@brianbilston">Brian Bilston</a>.</p>
+        
+
+        
+        <p><a href="https://docs.python.org/release/3.12.0/whatsnew/changelog.html#python-3-12-0">Full Changelog</a></p>
+        
+
+        
+
+        <header class="article-header">
+            <h2 class="page-title">Files</h2>
+        </header>
+
+        
+        <div class="featured-downloads-list">
+            
+            <div class="featured-download-box">
+                <h3>macOS</h3>
+                <p class="download-buttons">
+                    
+                    <a class="button" href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-macos11.pkg">Download macOS 64-bit universal2 installer</a>
+                    
+                </p>
+            </div>
+            
+            <div class="featured-download-box">
+                <h3>Windows</h3>
+                <p class="download-buttons">
+                    
+                    <a class="button" href="https://www.python.org/downloads/latest/pymanager/">Download Python install manager</a>
+                    
+                </p>
+            </div>
+            
+            <div class="featured-download-box">
+                <h3>Source release</h3>
+                <p class="download-buttons">
+                    
+                    <a class="button" href="https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tar.xz">Download XZ compressed source tarball</a>
+                    
+                </p>
+            </div>
+            
+        </div>
+        
+
+        <table>
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Operating system</th>
+              <th>Description</th>
+              <th>File size</th>
+              
+              <th colspan="2"><a href="https://www.python.org/download/sigstore/">Sigstore</a></th>
+              
+              
+              
+              <th><a href="https://www.python.org/downloads/#gpg">GPG</a></th>
+              
+              
+              <th>MD5 checksum</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz">Gzipped source tarball</a></td>
+                <td>Source release</td>
+                <td></td>
+                <td>25.9 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">d6eda3e1399cef5d</span><wbr><span class="checksum-half">fde7c4f319b0596c</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tar.xz">XZ compressed source tarball</a></td>
+                <td>Source release</td>
+                <td></td>
+                <td>19.6 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tar.xz.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tar.xz.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">f6f4616584b23254</span><wbr><span class="checksum-half">d165f4db90c247d6</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-macos11.pkg">macOS 64-bit universal2 installer</a></td>
+                <td>macOS</td>
+                <td>for macOS 10.9 and later</td>
+                <td>43.3 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-macos11.pkg.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-macos11.pkg.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">eddf6f35a3cbab94</span><wbr><span class="checksum-half">f2f83b2875c5fc27</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe">Windows installer (64-bit)</a></td>
+                <td>Windows</td>
+                <td>Recommended</td>
+                <td>25.3 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">32ab6a1058dfbde7</span><wbr><span class="checksum-half">6951b7aa7c2335a6</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0.exe">Windows installer (32-bit)</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>24.0 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0.exe.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0.exe.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">de59862985bf7afa</span><wbr><span class="checksum-half">639f2e4f9e2a722c</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-arm64.exe">Windows installer (ARM64)</a></td>
+                <td>Windows</td>
+                <td>Experimental</td>
+                <td>24.5 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-arm64.exe.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-arm64.exe.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">230c703e3b8b3d92</span><wbr><span class="checksum-half">765d118afa7b2f78</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-amd64.zip">Windows embeddable package (64-bit)</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>10.5 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-amd64.zip.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-amd64.zip.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">8e24d2b26a8dbf1d</span><wbr><span class="checksum-half">a0694b9da1a08b2c</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-win32.zip">Windows embeddable package (32-bit)</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>9.4 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-win32.zip.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-win32.zip.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">c2047dc270c4936f</span><wbr><span class="checksum-half">9c64619bb193b721</span></code></td>
+                
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-arm64.zip">Windows embeddable package (ARM64)</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>9.8 MB</td>
+                
+                  
+                  <td colspan="2"><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-arm64.zip.sigstore">.sigstore</a></td>
+                  
+                
+                
+                
+                <td><a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-embed-arm64.zip.asc">SIG</a></td>
+                
+                
+                <td><code class="checksum"><span class="checksum-half">3da91ef1a86a8a21</span><wbr><span class="checksum-half">0a32ea99c709dd93</span></code></td>
+                
+              </tr>
+            
+          </tbody>
+        </table>
+    </article>
+
+
+                </section>
+
+                
+                
+
+                
+                
+
+
+            </div><!-- end .container -->
+        </div><!-- end #content .content-wrapper -->
+
+        <!-- Footer and social media list -->
+        
+        <footer id="site-map" class="main-footer">
+            <div class="main-footer-links">
+                <div class="container">
+
+                    
+                    <a id="back-to-top-1" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+
+                    
+
+<ul class="sitemap navigation menu do-not-print" role="tree" id="container">
+    
+    <li class="tier-1 element-1">
+        <a href="/about/" >About</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/about/apps/" title="">Applications</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/about/quotes/" title="">Quotes</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/about/gettingstarted/" title="">Getting Started</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/about/help/" title="">Help</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://brochure.getpython.info/" title="">Python Brochure</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-2">
+        <a href="/downloads/" >Downloads</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/downloads/" title="">All releases</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/downloads/source/" title="">Source code</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/downloads/windows/" title="">Windows</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/downloads/macos/" title="">macOS</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/downloads/android/" title="">Android</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/download/other/" title="">Other Platforms</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="https://docs.python.org/3/license.html" title="">License</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/download/alternatives" title="">Alternative Implementations</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-3">
+        <a href="/doc/" >Documentation</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/doc/" title="">Docs</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/doc/av" title="">Audio/Visual Talks</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://wiki.python.org/moin/BeginnersGuide" title="">Beginner&#x27;s Guide</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="https://docs.python.org/3/faq/" title="">FAQ</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://translations.python.org/" title="">Non-English Docs</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="https://peps.python.org" title="">PEP Index</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="https://wiki.python.org/moin/PythonBooks" title="">Python Books</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/doc/essays/" title="">Python Essays</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-4">
+        <a href="/community/" >Community</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/community/diversity/" title="">Diversity</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/community/lists/" title="">Mailing Lists</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/community/irc/" title="">IRC</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/community/forums/" title="">Forums</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/psf/annual-report/2024/" title="">PSF Annual Impact Report</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/community/workshops/" title="">Python Conferences</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/community/sigs/" title="">Special Interest Groups</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/community/logos/" title="">Python Logo</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="https://wiki.python.org/moin/" title="">Python Wiki</a></li>
+    
+        <li class="tier-2 element-10" role="treeitem"><a href="/psf/conduct/" title="">Code of Conduct</a></li>
+    
+        <li class="tier-2 element-11" role="treeitem"><a href="/community/awards" title="">Community Awards</a></li>
+    
+        <li class="tier-2 element-12" role="treeitem"><a href="/psf/get-involved/" title="">Get Involved</a></li>
+    
+        <li class="tier-2 element-13" role="treeitem"><a href="/psf/community-stories/" title="">Shared Stories</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-5">
+        <a href="/success-stories/" title="success-stories">Success Stories</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/success-stories/category/arts/" title="">Arts</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/success-stories/category/business/" title="">Business</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/success-stories/category/education/" title="">Education</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/success-stories/category/engineering/" title="">Engineering</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/success-stories/category/government/" title="">Government</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/success-stories/category/scientific/" title="">Scientific</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/success-stories/category/software-development/" title="">Software Development</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-6">
+        <a href="/blogs/" title="News from around the Python world">News</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/blogs/" title="Python Insider Blog Posts">Python News</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/newsletter/" title="Python Software Foundation Newsletter">PSF Newsletter</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="http://pyfound.blogspot.com/" title="PSF Blog">PSF News</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="http://pycon.blogspot.com/" title="PyCon Blog">PyCon US News</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://planetpython.org/" title="Planet Python">News from the Community</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-7">
+        <a href="/events/" >Events</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/events/python-events/" title="">Python Events</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/events/python-user-group/" title="">User Group Events</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/events/python-events/past/" title="">Python Events Archive</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/events/python-user-group/past/" title="">User Group Events Archive</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://wiki.python.org/moin/PythonEventsCalendar#Submitting_an_Event" title="">Submit an Event</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-8">
+        <a href="/dev/" >Contributing</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#x27;s Guide</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="https://github.com/python/cpython/issues" title="">Issue Tracker</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://mail.python.org/mailman/listinfo/python-dev" title="">python-dev list</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/dev/core-mentorship/" title="">Core Mentorship</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/dev/security/" title="">Report a Security Issue</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+
+                    <a id="back-to-top-2" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+                    
+
+                </div><!-- end .container -->
+            </div> <!-- end .main-footer-links -->
+
+            <div class="site-base">
+                <div class="container">
+                    
+                    <ul class="footer-links navigation menu do-not-print" role="tree">
+                        <li class="tier-1 element-1"><a href="/about/help/">Help &amp; <span class="say-no-more">General</span> Contact</a></li>
+                        <li class="tier-1 element-2"><a href="/community/diversity/">Diversity <span class="say-no-more">Initiatives</span></a></li>
+                        <li class="tier-1 element-3"><a href="https://github.com/python/pythondotorg/issues">Submit Website Bug</a></li>
+                        <li class="tier-1 element-4">
+                            <a href="https://status.python.org/">Status <span class="python-status-indicator-default" id="python-status-indicator"></span></a>
+                        </li>
+                    </ul>
+
+                    <div class="copyright">
+                        <p><small>
+                            <span class="pre">Copyright &copy;2001-2026.</span>
+                            &nbsp;<span class="pre"><a href="/psf-landing/">Python Software Foundation</a></span>
+                            &nbsp;<span class="pre"><a href="/about/legal/">Legal Statements</a></span>
+                            &nbsp;<span class="pre"><a href="https://policies.python.org/python.org/Privacy-Notice/">Privacy Notice</a></span>
+                            <!--&nbsp;<span class="pre"><a href="/psf/community-infrastructure">Powered by PSF Community Infrastructure</a></span>-->
+                        </small></p>
+                    </div>
+
+                </div><!-- end .container -->
+            </div><!-- end .site-base -->
+
+        </footer>
+        
+
+    </div><!-- end #touchnav-wrapper -->
+
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-ui-1.12.1.min.js"><\/script>')</script>
+
+    <script src="/static/js/libs/masonry.pkgd.min.js"></script>
+    <script src="/static/js/libs/html-includes.js"></script>
+
+    <script type="text/javascript" src="/static/js/main-min.e1f3949ae225.js" charset="utf-8"></script>
+    
+
+    
+
+    
+    
+
+</body>
+</html>

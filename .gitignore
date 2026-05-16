@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.npz
+corpora/snapshots/*
+!corpora/snapshots/.gitkeep
+
+# LaTeX intermediates
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/missfont.log
+
+# Large vendored TeX trees (use Overleaf bundle instead)
+paper/texdeps/
+paper/acmart/
+paper/acmart.zip
+paper/*.zip
+
+# Optional: regenerate overleaf bundle locally
+# paper/overleaf_bundle/

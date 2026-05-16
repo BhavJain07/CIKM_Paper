@@ -1,0 +1,71 @@
+{
+  "queries": 140,
+  "k": 10,
+  "pool_k": 80,
+  "methods": {
+    "bm25": {
+      "recall_at_k": 0.32142857142857145,
+      "ndcg_at_k": 0.12613367338044296,
+      "psa_at_1_non_abstain": 0.014285714285714285,
+      "provenance_f1_at_3_non_abstain": 0.03571428571428571,
+      "sufficiency": 0.32142857142857145,
+      "minimality": 0.03214285714285714,
+      "answer_accuracy": 0.7975447225829988,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.42206475207432115
+    },
+    "authority_first": {
+      "recall_at_k": 0.32142857142857145,
+      "ndcg_at_k": 0.12613367338044296,
+      "psa_at_1_non_abstain": 0.014285714285714285,
+      "provenance_f1_at_3_non_abstain": 0.03571428571428571,
+      "sufficiency": 0.32142857142857145,
+      "minimality": 0.03214285714285714,
+      "answer_accuracy": 0.7975447225829988,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.42206475207432115
+    },
+    "recent_first": {
+      "recall_at_k": 0.39285714285714285,
+      "ndcg_at_k": 0.16065463915756129,
+      "psa_at_1_non_abstain": 0.007142857142857143,
+      "provenance_f1_at_3_non_abstain": 0.05714285714285714,
+      "sufficiency": 0.39285714285714285,
+      "minimality": 0.039285714285714285,
+      "answer_accuracy": 0.7826976669455609,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.43192441673639026
+    },
+    "pacer": {
+      "recall_at_k": 0.4357142857142857,
+      "ndcg_at_k": 0.19872935459666197,
+      "psa_at_1_non_abstain": 0.05714285714285714,
+      "provenance_f1_at_3_non_abstain": 0.05714285714285714,
+      "sufficiency": 0.4357142857142857,
+      "minimality": 0.04357142857142857,
+      "answer_accuracy": 0.7983035533859002,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.45754017406076075
+    },
+    "cluster_pacer": {
+      "recall_at_k": 0.6,
+      "ndcg_at_k": 0.28587303565915506,
+      "psa_at_1_non_abstain": 0.05714285714285714,
+      "provenance_f1_at_3_non_abstain": 0.12142857142857143,
+      "sufficiency": 0.6,
+      "minimality": 0.060000000000000005,
+      "answer_accuracy": 0.7983035533859002,
+      "abstention_accuracy": 1.0,
+      "prov_score": 0.49286160263218937
+    }
+  },
+  "mcnemar_psa_preferred_bm25_vs_pacer": 0.03125,
+  "mcnemar_n_queries": 140,
+  "pacer_weights": {
+    "alpha": 1.0,
+    "beta": 1.0,
+    "gamma": 1.0,
+    "delta": 1.0,
+    "eta": 1.0
+  }
+}

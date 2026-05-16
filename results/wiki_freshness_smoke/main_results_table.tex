@@ -1,0 +1,14 @@
+% Results table (provbench_rag.experiments.eval_suite
+\begin{tabular}{lrrrrr}
+\hline
+Method & PSA@1 & Recall@k & nDCG@k & Ans.Acc. & ProvScore \\
+\hline
+\texttt{bm25} & 0.333 & 1.000 & 0.710 & 1.000 & 0.700 \\
+\texttt{authority\_first} & 0.333 & 1.000 & 0.710 & 1.000 & 0.700 \\
+\texttt{recent\_first} & 0.667 & 1.000 & 0.833 & 0.929 & 0.766 \\
+\texttt{pacer} & 1.000 & 1.000 & 1.000 & 1.000 & 0.867 \\
+\texttt{cluster\_pacer} & 1.000 & 1.000 & 1.000 & 1.000 & 0.867 \\
+\hline
+\end{tabular}
+
+% McNemar PSA@1 (bm25 vs pacer), n=3: p=0.5000

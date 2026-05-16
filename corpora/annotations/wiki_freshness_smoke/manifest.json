@@ -1,0 +1,7 @@
+{
+  "track": "wikipedia_freshness_v1",
+  "articles_ok": 3,
+  "documents": 9,
+  "queries": 3,
+  "titles_file": "corpora/seeds/wikipedia_titles.txt"
+}

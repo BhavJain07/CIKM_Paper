@@ -1,0 +1,9 @@
+{
+  "merged_from": [
+    "corpora/annotations/synthetic_v1",
+    "corpora/annotations/wiki_freshness_v1"
+  ],
+  "documents": 4620,
+  "clusters": 1640,
+  "queries": 1640
+}
