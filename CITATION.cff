@@ -3,9 +3,8 @@ title: ProvBench-RAG
 message: If you use this resource, please cite it as below.
 type: software
 authors:
-  - family-names: Author
-    given-names: First
+  - family-names: Jain
+    given-names: Bhav
 license: MIT
-repository-code: https://github.com/YOUR_ORG/ProvBench-RAG
+repository-code: https://github.com/BhavJain07/CIKM_Paper
 version: 1.0.0
-doi: 10.5281/zenodo.XXXXXXX

@@ -1,25 +1,31 @@
-%% CIKM 2026 Resource Track submission (4 pages incl.\ appendix; references extra).
+%% CIKM 2026 Resource Track submission (4 pages incl. appendix; references extra).
+%% Single-file layout for Overleaf copy-paste / zip upload.
 \documentclass[sigconf]{acmart}
 \setcopyright{none}
 \settopmatter{printacmref=false,printfolios=true}
 \acmConference[CIKM '26]{CIKM}{2026}{Rome, Italy}
 \acmBooktitle{Proceedings of the 35th ACM International Conference on Information and Knowledge Management}
 \acmYear{2026}
+%% Hide placeholder proceedings DOI/ISBN on page 1 (separate from printacmref footer).
+\acmISBN{}
+\acmDOI{}
 
 \usepackage{booktabs}
 \usepackage{graphicx}
 
 %% Resource track: single-blind — include real names and affiliations.
-\author{First Author}
-\affiliation{\institution{Your Institution}}
-\city{Your City}
-\country{Your Country}
-\email{first.author@institution.edu}
-\author{Second Author}
-\affiliation{\institution{Your Institution}}
-\email{second.author@institution.edu}
+\author{Bhav Jain}
+\email{bhavjain7@gmail.com}
+\affiliation{%
+  \institution{American Heritage Palm Beach}
+  \city{Boca Raton}
+  \country{USA}
+}
 
-\input{generated_macros.tex}
+\newcommand{\ProvBenchNumQueries}{1,500}
+\newcommand{\WikiNumQueries}{140}
+\newcommand{\CombinedNumQueries}{1,640}
+\newcommand{\ProvPacerPSA}{0.750}
 
 \title{ProvBench-RAG: A Benchmark Resource for Provenance-Sensitive Retrieval Under Near-Duplicate Source Confusion}
 
@@ -30,8 +36,20 @@ Retrieval-augmented systems are often evaluated on whether \emph{some} passage s
 We release \textbf{ProvBench-RAG}, an open benchmark resource comprising JSONL schemas, three reproducible tracks (\ProvBenchNumQueries{} synthetic clusters, \WikiNumQueries{} Wikipedia revision clusters, \CombinedNumQueries{} pooled queries), deterministic evaluation code, and reference baseline rankings.
 The resource exposes \textbf{preferred-source accuracy} (PSA@1) and composite \textbf{ProvScore} alongside standard recall/nDCG.
 On the synthetic track, lexical BM25 achieves PSA@1 $=0$ under planted decoys while a bundled provenance reranker (PACER) reaches \ProvPacerPSA{}; Wikipedia and pooled tracks quantify transfer and heterogeneous-index stress.
-All data, metrics, and paper tables regenerate from the public repository (see Section~\ref{sec:avail}).
+All data, metrics, and paper tables regenerate from the public repository (Section~\ref{sec:avail}).
 \end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10002951.10003317</concept_id>
+       <concept_desc>Information systems~Information retrieval</concept_desc>
+       <concept_significance>500</concept_significance>
+   </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Information retrieval}
 
 \keywords{benchmark, retrieval, provenance, RAG, dataset, evaluation}
 
@@ -39,56 +57,167 @@ All data, metrics, and paper tables regenerate from the public repository (see S
 
 \section{Introduction}
 Near-duplicate \emph{source confusion} arises when many passages match a query lexically yet differ in authority, validity interval, copy type, or jurisdiction.
-Existing RAG benchmarks~\cite{lewis2020retrieval,jacovi2025facts,krishna2024frames,huwiler2025versionrag} rarely annotate which competing instance should be cited when metadata diverges.
+Existing RAG benchmarks~\cite{lewis2020retrieval,jacovi2025facts,krishna2024frames,huwiler2025versionrag,thakur2021beir} and automated RAG evaluators~\cite{es2023ragas,gao2024rag_survey} rarely annotate which competing instance should be cited when metadata diverges; provenance-aware retrieval remains under-specified in standard IR toolchains~\cite{saad2022provenance,robertson2009bm25,lin2021pyserini}.
 
 \textbf{Resource contribution.} ProvBench-RAG is a \emph{benchmark package}, not a new neural ranker: (i)~clustered JSONL corpora with gold preferred sources $P^\ast$, evidence/minimal sets, and conflict abstention; (ii)~a Python toolkit for indexing, metrics, and significance tests; (iii)~reference rankings (BM25, heuristics, PACER) to sanity-check the task.
 Researchers can plug in dense retrievers or cross-encoders while holding annotations fixed.
 
+\begin{table*}[t]
+\centering
+\small
+\caption{Positioning vs.\ related grounding benchmarks.}
+\label{tab:positioning}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Work & Answer grounding & Preferred \emph{instance} & Time / version axis & Explicit conflict \\
+\midrule
+FACTS~\cite{jacovi2025facts} & \checkmark & -- & -- & -- \\
+FRAMES~\cite{krishna2024frames} & \checkmark & implicit & partial & limited \\
+VersionRAG~\cite{huwiler2025versionrag} & \checkmark & version graph & \checkmark & -- \\
+\textbf{ProvBench-RAG} & \checkmark & \checkmark~($P^\ast$) & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
 \section{Resource design}
 \subsection{Schema}
-Each \texttt{document} record carries \texttt{cluster\_id}, provenance fields (\texttt{authority\_level}, validity dates, \texttt{original\_or\_copy\_label}, \texttt{jurisdiction}), and text.
-Each \texttt{query} record carries \texttt{gold\_answer}, \texttt{gold\_evidence\_ids}, \texttt{minimal\_evidence\_ids}, \texttt{preferred\_source\_ids}, optional \texttt{query\_time}/\texttt{query\_jurisdiction}, and \texttt{abstain\_required}.
-Clusters record \texttt{relation\_type} (e.g., \texttt{original\_vs\_copy}, \texttt{fresh\_vs\_stale}).
+Data fields are organized around nested source attributes to reduce parsing errors under high lexical overlap:
+\begin{itemize}
+    \item \textbf{Document records:} \texttt{cluster\_id}, \texttt{text}, and provenance keys (\texttt{authority\_level}, validity dates, \texttt{original\_or\_copy\_label}, \texttt{jurisdiction}).
+    \item \textbf{Query records:} \texttt{gold\_answer}, \texttt{gold\_evidence\_ids}, \texttt{minimal\_evidence\_ids}, \texttt{preferred\_source\_ids}, plus \texttt{query\_time}, \texttt{query\_jurisdiction}, and \texttt{abstain\_required}.
+    \item \textbf{Cluster groupings:} a global \texttt{relation\_type} per cluster (e.g., \texttt{original\_vs\_copy}, \texttt{fresh\_vs\_stale}).
+\end{itemize}
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.94\linewidth}{\centering\small
+\textbf{JSONL corpora} $\rightarrow$ \textbf{BM25 index} $\rightarrow$ \textbf{ranked lists $R(q)$} $\rightarrow$ \textbf{metrics}\\
+documents \& queries \hspace{0.5em}$\rightarrow$\hspace{0.5em} Okapi BM25 pool~\cite{robertson2009bm25} \hspace{0.5em}$\rightarrow$\hspace{0.5em} baselines / PACER \hspace{0.5em}$\rightarrow$\hspace{0.5em} PSA@1, ProvScore, McNemar
+}}
+\caption{Reproduction pipeline shipped in the artifact.}
+\label{fig:pipeline}
+\end{figure}
 
 \subsection{Tracks}
-Table~\ref{tab:tracks} lists released splits.
+Table~\ref{tab:tracks} lists released splits (query counts are \emph{total} per track).
 The \textbf{synthetic} generator (seed 42) plants five families of 300 clusters with lexical decoys in families B--D.
 The \textbf{Wikipedia} track fetches three revisions per article via the public MediaWiki API~\cite{wiki_api} with programmatic gold on the newest revision.
 The \textbf{combined} track concatenates synthetic and Wikipedia JSONL into one BM25 index to simulate heterogeneous corpora without routing.
 
 \begin{table}[t]
   \centering
-  \footnotesize
+  \small
   \caption{ProvBench-RAG v1 tracks shipped in the artifact.}
   \label{tab:tracks}
-  \input{tables/resource_tracks_table.tex}
+  \begin{tabular}{lp{2.6cm}rr}
+  \toprule
+  Track & Relation families / source & Clusters & Queries \\
+  \midrule
+  \texttt{synthetic\_v1} & A copy, B stale, C authority, D jurisdiction, E conflict & 1500 & 1500 \\
+  \texttt{wiki\_freshness\_v1} & Revision triples (MediaWiki API) & 140 & 140 \\
+  \texttt{combined\_v1} & Merged index (no domain router) & 1640 & 1640 \\
+  \bottomrule
+  \end{tabular}
 \end{table}
 
 \subsection{Metrics}
 Submissions report ranked lists $R(q)$.
-We distribute implementations for recall@$k$, nDCG@$k$, PSA@1 (top rank $\in P^\ast$), provenance F1@3, and composite ProvScore ($0.25$ Ans + $0.25$ PSA + $0.20$ Suff + $0.15$ Min + $0.15$ Abst).
+We distribute implementations for recall@$k$, nDCG@$k$, PSA@1 (top rank $\in P^\ast$ on \emph{non-abstain} queries), provenance F1@3, and composite ProvScore ($0.25$ Ans + $0.25$ PSA + $0.20$ Suff + $0.15$ Min + $0.15$ Abst).
+Conflict-track queries require abstention; PSA@1 and paired McNemar tests therefore use the non-abstain subset (1,200 of 1,500 synthetic; 1,340 of 1,640 combined; all 140 Wikipedia queries).
 
 \section{Availability and reproduction}
 \label{sec:avail}
-\textbf{Code and data.} GitHub: \url{https://github.com/YOUR\_ORG/ProvBench-RAG} (replace with your public URL).
+\textbf{Code and data.} GitHub: \url{https://github.com/BhavJain07/CIKM_Paper}.
 The repository includes \texttt{provbench\_rag/} (schemas, BM25 index, metrics), frozen JSONL under \texttt{corpora/annotations/}, and \texttt{results/*/metrics.json}.
 One-command reproduction: \texttt{bash scripts/reproduce\_full.sh} rebuilds corpora (optional Wikipedia crawl), reruns evaluations, and exports LaTeX table fragments.
 
-\textbf{Archive.} A Zenodo deposit with DOI (see repository \texttt{ZENODO.md}) archives the annotation bundles for long-term citation; recommended before camera-ready.
+\textbf{Archive.} A Zenodo deposit is \emph{reserved} (DOI to be minted at camera-ready; see \texttt{ZENODO.md}); annotation bundles will be archived for long-term citation alongside GitHub tags.
+
+\textbf{Sustainability.} v1 artifacts are frozen under git tags; issue templates accept community pull requests for new tracks (e.g., dense retriever pools) reviewed by the maintainer.
+Hosting is static (GitHub + Zenodo); no paid API keys are required beyond optional Wikipedia re-crawls.
+The maintainer commits to answering breakage reports for two years post-release and documenting schema migrations in \texttt{CHANGELOG.md}.
+
+\textbf{Licensing.} Code: MIT. Synthetic text: generated without PII. Wikipedia passages: CC BY-SA 4.0 via the Wikimedia API~\cite{wiki_api}, with conservative request delays and revision IDs stored in JSONL.
+
 Dataset card: \texttt{corpora/DATASET.md} documents provenance, licenses, and FAIR attributes.
 
-\textbf{Licensing.} Code: MIT. Synthetic text: generated without PII. Wikipedia content: used under Wikimedia API terms with conservative request delays.
-
 \section{Reference baselines and sample results}
-The artifact ships transparent baselines (not leaderboard claims): Okapi BM25, authority/recent heuristics, RRF fusion~\cite{cormack2009rrf}, and \textbf{PACER}---a linear fusion of pool-normalized BM25 with provenance features for ablation studies.
-Table~\ref{tab:summary} summarizes PSA@1, recall@10, and ProvScore on each track (full tables in \texttt{results/}).
+The artifact ships transparent baselines (not leaderboard claims): Okapi BM25~\cite{robertson2009bm25}, authority/recent heuristics, RRF fusion~\cite{cormack2009rrf}, and \textbf{PACER}---a linear fusion of pool-normalized BM25 with provenance features for ablation studies.
+Table~\ref{tab:summary} summarizes PSA@1, recall@10, and ProvScore on each track ($k{=}10$; PSA on non-abstain queries).
+Tables~\ref{tab:eval_wiki}--\ref{tab:eval_combined} give per-method breakdowns; McNemar $n$ is the non-abstain count used for PSA significance.
 
 \begin{table}[t]
   \centering
-  \footnotesize
-  \caption{Reference rankings (existing metrics; $k{=}10$). PACER is a bundled diagnostic reranker.}
+  \small
+  \caption{Reference rankings summary ($k{=}10$; track size is total queries).}
   \label{tab:summary}
-  \input{tables/resource_summary_table.tex}
+  \begin{tabular}{lrrrr}
+  \toprule
+  Track (queries) & Method & PSA@1 & Recall@10 & ProvScore \\
+  \midrule
+  Synthetic (1500) & BM25 & 0.000 & 1.000 & 0.469 \\
+  Synthetic (1500) & PACER & 0.750 & 1.000 & 0.703 \\
+  Wikipedia (140) & BM25 & 0.014 & 0.321 & 0.422 \\
+  Wikipedia (140) & PACER & 0.057 & 0.436 & 0.458 \\
+  Combined (1640) & BM25 & 0.012 & 0.435 & 0.272 \\
+  Combined (1640) & PACER & 0.278 & 0.782 & 0.497 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Wikipedia track ($140$ queries total; McNemar PSA@1, $n{=}140$, $p{=}0.0312$).}
+\label{tab:eval_wiki}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & PSA@1 & Recall@k & nDCG@k & Ans.Acc. & ProvScore \\
+\midrule
+\texttt{bm25} & 0.014 & 0.321 & 0.126 & 0.798 & 0.422 \\
+\texttt{authority\_first} & 0.014 & 0.321 & 0.126 & 0.798 & 0.422 \\
+\texttt{recent\_first} & 0.007 & 0.393 & 0.161 & 0.783 & 0.432 \\
+\texttt{pacer} & 0.057 & 0.436 & 0.199 & 0.798 & 0.458 \\
+\texttt{cluster\_pacer} & 0.057 & 0.600 & 0.286 & 0.798 & 0.493 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Synthetic track ($1{,}500$ queries; PSA on $1{,}200$ non-abstain; McNemar $n{=}1{,}200$, $p{<}10^{-6}$).}
+\label{tab:eval_synth}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & PSA@1 & Recall@k & nDCG@k & Ans.Acc. & ProvScore \\
+\midrule
+\texttt{bm25} & 0.000 & 1.000 & 0.553 & 0.413 & 0.469 \\
+\texttt{authority\_first} & 0.750 & 1.000 & 0.926 & 0.600 & 0.703 \\
+\texttt{recent\_first} & 0.000 & 0.200 & 0.063 & 0.404 & 0.294 \\
+\texttt{pacer} & 0.750 & 1.000 & 0.926 & 0.600 & 0.703 \\
+\texttt{cluster\_pacer} & 0.750 & 0.900 & 0.926 & 0.600 & 0.680 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Combined track ($1{,}640$ queries; PSA on $1{,}340$ non-abstain; McNemar $n{=}1{,}340$, $p{<}10^{-6}$).}
+\label{tab:eval_combined}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & PSA@1 & Recall@k & nDCG@k & Ans.Acc. & ProvScore \\
+\midrule
+\texttt{bm25} & 0.012 & 0.435 & 0.226 & 0.213 & 0.272 \\
+\texttt{authority\_first} & 0.236 & 0.435 & 0.338 & 0.251 & 0.338 \\
+\texttt{recent\_first} & 0.011 & 0.056 & 0.029 & 0.252 & 0.228 \\
+\texttt{pacer} & 0.278 & 0.782 & 0.565 & 0.435 & 0.497 \\
+\texttt{cluster\_pacer} & 0.278 & 0.677 & 0.546 & 0.435 & 0.473 \\
+\bottomrule
+\end{tabular}
 \end{table}
 
 \textbf{Utility.} The synthetic track separates high recall from PSA@1 failure under decoys---a pattern standard QA retrieval scores under-report.

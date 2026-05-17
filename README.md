@@ -39,7 +39,7 @@ bash scripts/reproduce_full.sh
 | `corpora/DATASET.md` | Dataset card (FAIR-style) |
 | `ZENODO.md` | How to mint the required DOI |
 
-**Before submit:** replace `YOUR_ORG` GitHub URL and Zenodo DOI in `paper/main.tex`; add real author names (single-blind).
+**Before submit:** compile `paper/main.tex` on Overleaf (see `paper/provbench-rag-overleaf.zip`); Zenodo DOI can be added at camera-ready.
 
 ## Build paper PDF (Overleaf)
 

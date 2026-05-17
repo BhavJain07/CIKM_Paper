@@ -68,15 +68,15 @@ Create the zip: `bash scripts/prepare_zenodo_zip.sh` → upload `dist/provbench-
 ### A. GitHub (you said you will add URL)
 
 1. Push this repo to GitHub (public).
-2. Open **`paper/main.tex`** → find `https://github.com/YOUR_ORG/ProvBench-RAG` → replace with your real URL.
-3. Update **`README.md`** and **`CITATION.cff`** with the same URL.
+2. Confirm GitHub URL in **`paper/main.tex`**: `https://github.com/BhavJain07/CIKM_Paper`.
+3. **`README.md`** and **`CITATION.cff`** already point to the same repo.
 4. Quick check: clone in a fresh folder and run `bash scripts/reproduce.sh` (optional but good).
 
 ### B. Paper PDF (Overleaf — replaces old 7-page `main.pdf`)
 
 1. On your Mac: `bash scripts/package_overleaf.sh`
 2. Go to [overleaf.com](https://www.overleaf.com) → New Project → Upload Project.
-3. Upload **everything inside** `paper/overleaf_bundle/`.
+3. Upload **`paper/provbench-rag-overleaf.zip`** (main.tex is at the zip root).
 4. Set main document: **`main.tex`**.
 5. Compile (pdfLaTeX + BibTeX). Fix only if Overleaf shows errors.
 6. Check page count: **≤4 pages** of body before references.
