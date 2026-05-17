@@ -1,34 +1,13 @@
-# Reproducibility
-
-## Requirements
-
-- Python 3.10+
-- `pip install -e ".[dev]"`
-
-## Full pipeline
+# Reproducibility (ProvBench-RAG Resource)
 
 ```bash
+pip install -e ".[dev]"
 bash scripts/reproduce_full.sh
 python -m provbench_rag.scripts.export_paper_artifacts
-bash scripts/build_submission_pdfs.sh
 ```
 
-## Outputs
+Frozen outputs: `results/*/metrics.json`, `paper/generated_macros.tex`, `paper/tables/resource_summary_table.tex` (hand-synced summary).
 
-| Path | Description |
-|------|-------------|
-| `results/synthetic_v1/metrics.json` | Primary synthetic metrics |
-| `results/synthetic_v1/extended/metrics_extended.json` | Stratified, ablations, bootstrap |
-| `results/wiki_freshness_v1/metrics.json` | Wikipedia revision track |
-| `results/combined_v1/metrics.json` | Pooled corpus |
-| `paper/generated_macros.tex` | LaTeX numeric macros |
+Paper table numbers for Resource track: `paper/tables/resource_summary_table.tex` (from last `metrics.json` run).
 
-## Wikipedia crawl
-
-Respect Wikimedia rate limits. Default `reproduce_public_data.sh` uses `WIKI_MAX_ARTICLES=15`; set `WIKI_MAX_ARTICLES=0` for the full seed list (slow).
-
-## Tests
-
-```bash
-pytest -q
-```
+Zenodo: see [ZENODO.md](ZENODO.md).

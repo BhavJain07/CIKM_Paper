@@ -3,119 +3,79 @@
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
 
-\title{CIKM 2026 Submission Guide\\[0.3em]\large ProvBench-RAG (Full Research Track)}
+\title{CIKM 2026 Resource Track --- Submission Guide\\ProvBench-RAG}
 \author{}
-\date{May 16, 2026}
+\date{May 2026}
 
 \begin{document}
 \maketitle
-\tableofcontents
-\newpage
 
-\section{Deadlines (Anywhere on Earth)}
+\section{Chosen track: Resource (highest fit)}
+
+\textbf{Submit to: CIKM 2026 Resource} in EasyChair (not Full, Short, or Applied).
+
+\textbf{Why:} ProvBench-RAG is a benchmark package (JSONL + code + reference baselines). Resource reviewers expect datasets, DOI, documentation, and utility---not a deployed product (Applied) or a 10-page novel method (Full).
+
+\section{Deadlines (11:59pm AoE)}
 
 \begin{tabular}{ll}
 \hline
-Event & Date \\
+Step & Date \\
 \hline
-Abstract registration & May 16, 2026 \\
-Full paper PDF upload & May 23, 2026 \\
+Abstract + authors in EasyChair & May 30, 2026 \\
+Paper PDF upload & June 6, 2026 \\
 Notification & August 7, 2026 \\
-Camera-ready & August 20, 2026 \\
+Camera-ready (+ Zenodo DOI in paper) & August 20, 2026 \\
 \hline
 \end{tabular}
 
-\medskip
-Official: \url{https://cikm2026.diag.uniroma1.it/submit/} \\
-Full track CFP: \url{https://cikm2026.diag.uniroma1.it/full-research-papers/} \\
-EasyChair: \url{https://easychair.org/my/conference?conf=cikm26}
+\section{Step 1 --- EasyChair abstract (May 30)}
 
-\section{Official paper template}
-
-CIKM requires the \textbf{ACM Master Article Submission Template} (2-column), not a custom CIKM \texttt{.tex} file.
-
-\begin{itemize}
-\item Download: \url{https://www.acm.org/publications/proceedings-template}
-\item LaTeX class: \texttt{acmart}, proceedings option: \texttt{sigconf}
-\item Repository manuscript: \texttt{paper/main\_acmart.tex}
-\end{itemize}
-
-\noindent Review-oriented preamble:
-\begin{verbatim}
-\documentclass[sigconf,anonymous,review]{acmart}
-\setcopyright{none}
-\settopmatter{printacmref=false}
-\end{verbatim}
-
-\textbf{Page limit:} at most 10 pages including figures, tables, and appendix content, plus up to 2 additional pages used only for references. Overlength papers are desk-rejected.
-
-\section{Abstract registration (May 16)}
-
-\textbf{Checklist}
 \begin{enumerate}
-\item EasyChair track: \textbf{CIKM 2026 Full Research Track}.
-\item Enter final \textbf{author names and affiliations} (frozen after May 16).
-\item Paste title and abstract from \texttt{paper/abstract\_easychair.txt}.
-\item Keywords: retrieval-augmented generation; provenance; benchmarking; near-duplicate retrieval; evaluation.
-\item Nominate at least one author as reviewer (required).
-\item If a public preprint exists, use a distinct title and abstract on the archive versus CIKM (double-blind policy).
+\item \url{https://easychair.org/my/conference?conf=cikm26}
+\item New submission $\rightarrow$ \textbf{CIKM 2026 Resource}
+\item Title and abstract from \texttt{paper/abstract\_easychair.txt}
+\item Real author names and affiliations (single-blind; names go on the PDF too)
+\item Nominate $\geq$1 author as reviewer
 \end{enumerate}
 
-\begin{tabular}{ll}
-\hline
-File & Purpose \\
-\hline
-\texttt{abstract\_easychair.txt} & Paste into EasyChair \\
-\texttt{abstract\_submission.pdf} & Personal copy \\
-\hline
-\end{tabular}
+\section{Step 2 --- Edit paper (before Overleaf)}
 
-\section{Full paper upload (May 23)}
-
-\textbf{Avoid desk rejection}
+In \texttt{paper/main.tex} replace:
 \begin{itemize}
-\item Upload \texttt{main\_acmart.pdf} in ACM 2-column format.
-\item Double-blind PDF: no names, affiliations, acknowledgments, or identifying URLs.
-\item Third-person self-citations only.
-\item Respect page limits.
-\item Authorship unchanged since abstract registration.
-\item Reviewer nomination completed at abstract stage.
-\item Work not concurrently under review elsewhere.
+\item Author names, affiliations, emails
+\item GitHub URL (\texttt{YOUR\_ORG/ProvBench-RAG})
+\item Zenodo DOI after upload (\texttt{10.5281/zenodo.XXXXXXX})
 \end{itemize}
 
-\textbf{Build PDF}
+\section{Step 3 --- Overleaf PDF (by June 6)}
 
-\textit{Overleaf (recommended):} Upload \texttt{paper/overleaf\_bundle/} (create with \texttt{bash scripts/package\_overleaf.sh}). Set main file \texttt{main\_acmart.tex}. Compile with pdfLaTeX + BibTeX.
+\begin{enumerate}
+\item Run \texttt{bash scripts/package\_overleaf.sh}
+\item Upload \texttt{paper/overleaf\_bundle/} to Overleaf
+\item Main file: \texttt{main.tex}
+\item Compile pdfLaTeX + BibTeX
+\item Check: $\leq$4 pages of content (appendix counts toward 4); references extra
+\item Download PDF
+\end{enumerate}
 
-\textit{Local:} Full MacTeX/TeX Live with \texttt{acmart} dependencies:
-\begin{verbatim}
-cd paper
-pdflatex main_acmart.tex && bibtex main_acmart
-pdflatex main_acmart.tex && pdflatex main_acmart.tex
-\end{verbatim}
+\section{Step 4 --- Zenodo DOI}
 
-\textbf{Reproducibility} (optional anonymous GitHub link in paper):
-\begin{verbatim}
-bash scripts/reproduce_full.sh
-python -m provbench_rag.scripts.export_paper_artifacts
-\end{verbatim}
+Follow \texttt{ZENODO.md}. Resource track expects a citable archive. Add DOI to paper before camera-ready; June submission may say ``pending'' if upload is in progress.
 
-\section{Repository map}
+\section{Step 5 --- Upload paper (June 6)}
 
-\begin{tabular}{ll}
-\hline
-Path & Role \\
-\hline
-\texttt{provbench\_rag/} & Code: schemas, PACER, BM25, metrics \\
-\texttt{corpora/annotations/} & JSONL datasets \\
-\texttt{results/} & Metrics and table fragments \\
-\texttt{scripts/} & Reproduction shell scripts \\
-\texttt{paper/} & Manuscript and submission PDFs \\
-\hline
-\end{tabular}
+Same EasyChair submission $\rightarrow$ upload Resource PDF.
 
-\section{Contacts}
+\section{Desk-reject checklist}
 
-Program chairs: \texttt{cikm2026-pc@easychair.org}.
+\begin{itemize}
+\item Track = Resource
+\item 4-page limit respected
+\item Authors on PDF (single-blind)
+\item Reviewer nominated
+\item GitHub link works; dataset documented in \texttt{corpora/DATASET.md}
+\item Zenodo planned or cited
+\end{itemize}
 
 \end{document}

@@ -1,5 +1,5 @@
-Upload all files in this folder to Overleaf.
-Use compiler: pdfLaTeX.
-Main file: main_acmart.tex
-Template: ACM acmart sigconf (already included via acmart.cls).
-After compile, download main_acmart.pdf for EasyChair (May 23).
+CIKM 2026 Resource Track — Overleaf upload
+Main file: main.tex
+Compiler: pdfLaTeX + BibTeX
+Limit: 4 pages content (incl. appendix) + references
+Single-blind: put real author names in main.tex before upload

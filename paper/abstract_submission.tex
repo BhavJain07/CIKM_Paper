@@ -1,22 +1,18 @@
-% Standalone abstract for CIKM 2026 EasyChair (paste text into form; PDF for records).
 \documentclass[11pt]{article}
 \usepackage[margin=1.25in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{microtype}
 \usepackage{hyperref}
 
-\title{ProvBench-RAG: Provenance-Sensitive Retrieval Under Near-Duplicate Source Confusion}
-% Authors are entered in EasyChair on May 16 (not anonymous there).
-\author{See EasyChair submission}
+\title{ProvBench-RAG: A Benchmark Resource for Provenance-Sensitive Retrieval Under Near-Duplicate Source Confusion}
+\author{[Authors --- Resource track, single-blind]}
 \date{}
 
 \begin{document}
 \maketitle
 \thispagestyle{empty}
 
-\noindent\textbf{Track:} CIKM 2026 Full Research Papers\\
-\noindent\textbf{Keywords:} retrieval-augmented generation; provenance; benchmarking; near-duplicate retrieval; evaluation
+\noindent\textbf{Track:} CIKM 2026 Resource \\
+\noindent\textbf{Keywords:} benchmark, retrieval, provenance, RAG, dataset, evaluation
 
 \vspace{0.75em}
 \noindent\rule{\textwidth}{0.4pt}
@@ -24,19 +20,11 @@
 
 \begin{abstract}
 \noindent
-Retrieval-augmented generation (RAG) systems are often evaluated on whether an answer can be supported by \emph{some} retrieved passage.
-Deployed assistants, however, must routinely choose among near-duplicate sources---mirrors, stale snapshots, scraped copies, and jurisdiction-specific variants---that share topical overlap but differ in authority, validity, and attribution.
-We study this \emph{instance-level provenance} problem under lexical collision: many candidates look equally relevant, yet only one (or none) should be cited.
-
-We present ProvBench-RAG, a benchmark specification and reproducible dataset format with clustered documents, gold preferred sources, minimal evidence sets, temporal and jurisdiction constraints, and abstention when authoritative sources disagree.
-We further introduce PACER (Provenance-Aware Cluster Evidence Reranking), a transparent reranker that fuses min--max normalized BM25 scores with declarative provenance signals (authority, freshness, originality/copy labels, jurisdiction alignment) over a fixed candidate pool.
-
-On a controlled synthetic split of 1{,}500 queries with explicit lexical decoys, BM25 achieves preferred-source accuracy at rank~1 (PSA@1) of 0 while PACER reaches 0.75 (McNemar $p<10^{-200}$, $n=1{,}200$), with composite ProvScore rising from 0.469 to 0.703 and nDCG@10 from 0.553 to 0.926.
-Stratified analysis shows gains across freshness, authority, and jurisdiction families.
-On 140 English Wikipedia revision clusters, PACER improves PSA@1 from 0.014 to 0.057 ($p=0.031$), though absolute accuracy remains low.
-A pooled heterogeneous index (1{,}640 queries) shows recall collapse under a single lexical index (0.435) and partial recovery with provenance reranking (0.782).
-All results regenerate from the released artifact.
+Retrieval-augmented systems are often evaluated on whether some passage supports an answer, but deployed pipelines must also choose the correct document instance among near-duplicates (mirrors, stale snapshots, scraped copies, jurisdiction variants).
+We release ProvBench-RAG, an open benchmark resource comprising JSONL schemas, three reproducible tracks (1,500 synthetic clusters, 140 Wikipedia revision clusters, 1,640 pooled queries), deterministic evaluation code, and reference baseline rankings.
+The resource exposes preferred-source accuracy (PSA@1) and composite ProvScore alongside recall and nDCG.
+On the synthetic track, lexical BM25 achieves PSA@1 of 0 under planted decoys while a bundled provenance reranker reaches 0.75; Wikipedia and pooled tracks quantify transfer and heterogeneous-index stress.
+All data, metrics, and paper tables regenerate from public scripts and frozen annotations in the repository.
 \end{abstract}
 
-\vspace{1em}
 \end{document}

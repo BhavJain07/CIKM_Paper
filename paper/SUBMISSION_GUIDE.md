@@ -1,9 +1,9 @@
-# CIKM 2026 submission
+# CIKM 2026 — Resource track only
 
-**Full instructions (PDF):** [`SUBMISSION_GUIDE.pdf`](SUBMISSION_GUIDE.pdf)
+**Full guide (PDF):** [SUBMISSION_GUIDE.pdf](SUBMISSION_GUIDE.pdf)
 
-**Abstract (paste into EasyChair):** [`abstract_easychair.txt`](abstract_easychair.txt)
+**Abstract:** [abstract_easychair.txt](abstract_easychair.txt) → EasyChair track **CIKM 2026 Resource**
 
-**Paper (ACM, May 23):** compile [`main_acmart.tex`](main_acmart.tex) via [`overleaf_bundle/`](overleaf_bundle/) → `main_acmart.pdf`
+**Paper:** [main.tex](main.tex) → Overleaf via `bash ../scripts/package_overleaf.sh`
 
-Rebuild local PDFs: `bash scripts/build_submission_pdfs.sh`
+**Deadlines (AoE):** abstract May 30, paper June 6, notification August 7.

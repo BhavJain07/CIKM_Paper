@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "provbench-rag"
 version = "0.1.0"
-description = "ProvBench-RAG: provenance-sensitive retrieval under near-duplicate source confusion"
+description = "ProvBench-RAG: CIKM Resource-track benchmark for provenance-sensitive retrieval under near-duplicate source confusion"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
